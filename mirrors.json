@@ -1,0 +1,7 @@
+{
+    "tencent": "https://mirrors.cloud.tencent.com/jenkins/",
+    "huawei": "https://mirrors.huaweicloud.com/jenkins/",
+    "tsinghua": "https://mirrors.tuna.tsinghua.edu.cn/jenkins/",
+    "ustc": "https://mirrors.ustc.edu.cn/jenkins/",
+    "bit": "http://mirror.bit.edu.cn/jenkins/"
+}
