@@ -46,7 +46,7 @@ curl -sSL https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/speed-test.sh
 
 ```bash
 [ ! -d /var/lib/jenkins/update-center-rootCAs ] && mkdir /var/lib/jenkins/update-center-rootCAs
-wget https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/rootCA/update-center.crt -o /var/lib/jenkins/update-center-rootCAs/update-center.crt
+wget https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
 chown jenkins.jenkins -R /var/lib/jenkins/update-center-rootCAs
 ```
 
