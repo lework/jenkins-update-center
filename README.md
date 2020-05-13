@@ -44,15 +44,32 @@ curl -sSL https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/speed-test.sh
 
 1. Upload custom CA file.
 
-```bash
-[ ! -d /var/lib/jenkins/update-center-rootCAs ] && mkdir /var/lib/jenkins/update-center-rootCAs
-wget https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
-chown jenkins.jenkins -R /var/lib/jenkins/update-center-rootCAs
-```
+    ```bash
+    [ ! -d /var/lib/jenkins/update-center-rootCAs ] && mkdir /var/lib/jenkins/update-center-rootCAs
+    wget https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/rootCA/update-center.crt -O /var/lib/jenkins/update-center-rootCAs/update-center.crt
+    chown jenkins.jenkins -R /var/lib/jenkins/update-center-rootCAs
+    ```
+
+    > Or turn off the signature verification of the update service.
+    >
+    > ```bash
+    > sed -i 's#$JENKINS_JAVA_OPTIONS#$JENKINS_JAVA_OPTIONS -Dhudson.model.DownloadService.noSignatureCheck=true#g' /etc/init.d/jenkins
+    > 
+    > systemctl daemon-reload
+    > ```
 
 2. Change Update Site url.
 
-Go to `Jenkins` → `Manage Jenkins` → `Manage Plugins` → `Advanced` → Update Site and submit URL to your `https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json`
+   ```bash
+   sed -i 's#https://updates.jenkins.io/update-center.json#https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json#' /var/lib/jenkins/hudson.model.UpdateCenter.xml
+   rm -f /var/lib/jenkins/updates/default.json
+
+   systemctl restart jenkins
+   ```
+   
+   > Or it can be modified on the web.
+   >
+   > Go to `Jenkins` → `Manage Jenkins` → `Manage Plugins` → `Advanced` → Update Site and submit URL to your `https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json`
 
 
 
