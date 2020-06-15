@@ -11,6 +11,7 @@ import os
 import json
 import base64
 import binascii
+import http.client
 import urllib.request
 from Crypto.Hash import SHA512, SHA
 from Crypto.PublicKey import RSA
@@ -108,7 +109,10 @@ def main():
   original_download_url = "http://updates.jenkins-ci.org/download/"
   original_update_center_url = "https://mirrors.cloud.tencent.com/jenkins/updates/update-center.json"
   original_file = urllib.request.urlopen(original_update_center_url)
-  original_context = original_file.read()
+  try:
+    original_context = original_file.read()
+  except http.client.IncompleteRead as e:
+    original_context = e.partial.decode('utf-8')
   original = json.loads(original_context.replace(str.encode("updateCenter.post(\n"), str.encode("")).replace(str.encode("\n);"), str.encode("")))
   
   uc = JenkinsUpdateCenter()
