@@ -106,7 +106,7 @@ def main():
   private_key = "rootCA/update-center.key"
   public_key = "rootCA/update-center.crt"
   
-  original_download_url = "http://updates.jenkins-ci.org/download/"
+  original_download_url = "https://updates.jenkins.io/download/"
   original_update_center_url = "https://mirrors.cloud.tencent.com/jenkins/updates/update-center.json"
   original_file = urllib.request.urlopen(original_update_center_url)
   try:
