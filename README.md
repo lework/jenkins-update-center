@@ -18,7 +18,8 @@ Updated daily at 1 AM UTC
 - huawei https://mirrors.huaweicloud.com/jenkins/
 - tsinghua https://mirrors.tuna.tsinghua.edu.cn/jenkins/
 - ustc https://mirrors.ustc.edu.cn/jenkins/
-- bit http://mirror.bit.edu.cn/jenkins/
+- bit https://mirrors.bit.edu.cn/jenkins/
+- aliyun https://mirrors.aliyun.com/jenkins/
 
 
 
@@ -31,6 +32,7 @@ Updated daily at 1 AM UTC
 | tsinghua | https://raw.githubusercontent.com/lework/jenkins-update-center/master/updates/tsinghua/update-center.json | https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/tsinghua/update-center.json |
 | ustc     | https://raw.githubusercontent.com/lework/jenkins-update-center/master/updates/ustc/update-center.json | https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/ustc/update-center.json |
 | bit      | https://raw.githubusercontent.com/lework/jenkins-update-center/master/updates/bit/update-center.json | https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/bit/update-center.json |
+| aliyun      | https://raw.githubusercontent.com/lework/jenkins-update-center/master/updates/aliyun/update-center.json | https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/updates/aliyun/update-center.json |
 
 **mirror site speed test** 
 

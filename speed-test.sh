@@ -24,7 +24,8 @@ mirrors=(
   [huawei]="https://mirrors.huaweicloud.com/jenkins/"
   [tsinghua]="https://mirrors.tuna.tsinghua.edu.cn/jenkins/"
   [ustc]="https://mirrors.ustc.edu.cn/jenkins/"
-  [bit]="http://mirror.bit.edu.cn/jenkins/"
+  [bit]="https://mirrors.bit.edu.cn/jenkins/"
+  [aliyun]="https://mirrors.aliyun.com/jenkins/"
 )
 
 file="updates/current/plugin-versions.json"
