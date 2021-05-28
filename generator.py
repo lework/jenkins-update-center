@@ -130,9 +130,11 @@ def main():
     print("Generate:", mirror_url)
     uc.plugins = json.loads(json.dumps(original["plugins"]).replace(original_download_url, mirror_url))
     uc.core = json.loads(json.dumps(original["core"]).replace(original_download_url, mirror_url))
-    if not os.path.exists(site):
-      os.makedirs(site)
-    with open("updates/" + site + "/update-center.json", "w") as fd:
+    
+    site_path = "updates/" + site
+    if not os.path.exists(site_path):
+      os.makedirs(site_path)
+    with open(site_path + "/update-center.json", "w") as fd:
       uc.out(fd)
 
 
