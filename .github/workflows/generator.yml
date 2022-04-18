@@ -28,7 +28,7 @@ jobs:
       run: |
         python generator.py
     - name: Push
-      uses: github-actions-x/commit@v2.0
+      uses: github-actions-x/commit@v2.9
       with:
         github-token: ${{ secrets.TOKEN }}
         push-branch: 'master'
