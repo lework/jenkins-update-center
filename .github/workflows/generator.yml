@@ -33,5 +33,6 @@ jobs:
         github-token: ${{ secrets.TOKEN }}
         push-branch: 'master'
         commit-message: 'This is an github action commit.'
+        files: updates/bit/update-center.json updates/huawei/update-center.json updates/tencent/update-center.json updates/tsinghua/update-center.json updates/ustc/update-center.json
         force-add: 'true'
         force-push: 'true'
