@@ -30,7 +30,7 @@ jobs:
     - name: Push
       uses: github-actions-x/commit@v2.9
       with:
-        github-token: ${{ secrets.TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'
         commit-message: 'This is an github action commit.'
         name: lework
