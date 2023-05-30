@@ -80,7 +80,7 @@ curl -sSL https://cdn.jsdelivr.net/gh/lework/jenkins-update-center/speed-test.sh
 1. Clone code:
 
 ```bash
-git clone https://github.com/iamtrump/jenkins-update-center.git 
+git clone https://github.com/lework/jenkins-update-center.git 
 ```
 
 2. Generate self-signed certificate:
@@ -88,7 +88,7 @@ git clone https://github.com/iamtrump/jenkins-update-center.git
 ```bash
 cd jenkins-update-center
 openssl genrsa -out rootCA/update-center.key 2048
-openssl req -new -x509 -days 3650 rootCA/update-center.key -out rootCA/update-center.crt
+openssl req -new -x509 -days 3650 -key rootCA/update-center.key -out rootCA/update-center.crt
 ```
 
 3. Rsync into your www root directory:
