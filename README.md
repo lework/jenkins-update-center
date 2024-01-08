@@ -11,7 +11,6 @@ Jenkins mirror update center generator
 Updated daily at 1 AM UTC
 
 
-
 ## Mirror site
 
 - tencent https://mirrors.cloud.tencent.com/jenkins/
